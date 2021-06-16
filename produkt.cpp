@@ -333,27 +333,20 @@ int main()
 
 
 /*
-	Të ndërtohet programi ne c++ që menaxhon një magazinë.
+	TÃ« ndÃ«rtohet programi ne c++ qÃ« menaxhon njÃ« magazinÃ«.
 	
-    Detyrat qe do zgjidhë programi.
-    Regjistrimi i një produkti të ri (Insert product)  
+    Detyrat qe do zgjidhÃ« programi.
+    Regjistrimi i njÃ« produkti tÃ« ri (Insert product)  
     Visualizim lista e katalogut te produkteve ne magazine tashme te regjistruar
-    Kërkim i produktit ne baze te kodit te tij  
-    Kërkim i produktit ne baze emri(product name)  
-    Ndryshimi(modifikimi) i te dhënave për çdo produkt  
-    Regjistrimi i te dhënave dhe ruajtja e tyre ne disk(storage)
-    Krijimi i tabelave për faturat e produkteve
+    KÃ«rkim i produktit ne baze te kodit te tij  
+    KÃ«rkim i produktit ne baze emri(product name)  
+    Ndryshimi(modifikimi) i te dhÃ«nave pÃ«r Ã§do produkt  
+    Regjistrimi i te dhÃ«nave dhe ruajtja e tyre ne disk(storage)
+    Krijimi i tabelave pÃ«r faturat e produkteve
     
     ********************************
     
-    Universiteti "Aleksandër Moisiu" Durrës - UAMD
-    
-    Punuan :
-    
-    Ilirijan Troci
-    Fjorida Dosku
-    Ilda Rapushi
-    Gerald Hasi
+    Universiteti "AleksandÃ«r Moisiu" DurrÃ«s - UAMD
     
     Lenda : Programim ne c++
 
