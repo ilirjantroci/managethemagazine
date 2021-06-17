@@ -3,7 +3,7 @@
 #include<string>
 using namespace std;
 
-struct Produkt {
+struct Produkt {  //fushat e produktit (kolonat)
  
     int kodi;
     string emri;
@@ -13,9 +13,9 @@ struct Produkt {
     string kategoria;
 };
 
-void shtoProdukt() {
+void shtoProdukt() {  //Shto nje produkt ne sistem 
 	
-    Produkt produkt;
+    Produkt produkt; //aksesimi i fushave te produktit
     cout << "\n\tShkruaj kodin : ";
     cin >> produkt.kodi;
     cout << "\n\tShkruaj emrin : ";
@@ -25,7 +25,7 @@ void shtoProdukt() {
     cin >> produkt.cmimi;
     cout << "\n\tShkruaj pershkrimin : ";
     cin.get();
-    getline(cin, produkt.pershkrimi);
+    getline(cin, produkt.pershkrimi);  //getline -> per te pranuar hapesirat gjate shkrimit
     cout << "\n\tShkruaj peshen: ";
     cin >> produkt.pesha;
     cout << "\n\tShkruaj kategorine : ";
@@ -33,11 +33,11 @@ void shtoProdukt() {
     getline(cin, produkt.kategoria);
 
 
-    ofstream shtoTeDhenat;
+    ofstream shtoTeDhenat; //perdorimi ofstream per te punuar me skedare
     
-    shtoTeDhenat.open("produktet.txt", ios::app);
+    shtoTeDhenat.open("produktet.txt", ios::app);  //krijimi i skedarit produktet.txt
     
-
+	//shtimi i te dhenave (insert) ne skedarin produktet.txt
     shtoTeDhenat << "\n" << produkt.kodi ;
     shtoTeDhenat << "\n" << produkt.emri ;
     shtoTeDhenat << "\n" << produkt.cmimi ;
@@ -50,7 +50,7 @@ void shtoProdukt() {
     cout << "\n\tProdukti u ruajt me sukses \n";
 }
 
-void afisho(Produkt produkt) {
+void afisho(Produkt produkt) {  //Afisho te dhenat e produktit (rekordet)
    
     cout << "\n\tKodi : " << produkt.kodi;
     cout << "\n\tEmri : " << produkt.emri;
@@ -60,11 +60,11 @@ void afisho(Produkt produkt) {
     cout << "\n\tKategoria : " << produkt.kategoria<<endl;
 }
 
-void listoProduktet(){
+void listoProduktet(){  //Listo katalogun , listen e produkteve qe jane te regjistruara
 	
 	Produkt produkt;
 	
-    ifstream lexo;
+    ifstream lexo;  //perdorimi i ifstream per te lexuar te dhena nga nje file 
     
     lexo.open("produktet.txt");
     
@@ -87,9 +87,9 @@ void listoProduktet(){
     lexo.close();
 }
 
-int kerkoProdukt(){
+int kerkoProdukt(){  //Kerko nje produkt ne baze te kodit te produktit
 	
-	int kodi;
+	int kodi;  //kodi qe do te kerkohet
 	
     cout << "\n\tShkruani kodin e produktit qe doni te kerkoni : ";
     cin >> kodi;
@@ -123,8 +123,9 @@ int kerkoProdukt(){
     
 }
 
-void kerkoProduktEmri(){
-	string emri;
+void kerkoProduktEmri(){  //Kerko nje produkt ne baze te emrit te produktit
+	
+	string emri; //emri i produktit qe do te kerkohet
 	
     cout << "\n\tShkruani emrin e produktit qe doni te kerkoni : ";
     cin.get();
@@ -154,9 +155,9 @@ void kerkoProduktEmri(){
     }
 }
 
-void ndryshoProdukt(){
+void ndryshoProdukt(){ //Ndrysho te dhenat e nje produkti
 	
-	int kodi = kerkoProdukt();
+	int kodi = kerkoProdukt();  // kerkojme produktin qe do te modifikojme , kodi vjen nga return kodi; ne funksionin kerkoProdukt; 
 	
     cout << "\n\tA deshironi te ndryshoni te dhenat e ketij produkti (po/jo) : ";
     
@@ -232,9 +233,9 @@ void ndryshoProdukt(){
     }
 }
 
-void fshijProdukt(){
+void fshijProdukt(){ //Fshij nje produkt nga katalogu
 	
-	int kodi = kerkoProdukt();
+	int kodi = kerkoProdukt(); // kerkojme produktin qe do te modifikojme , kodi vjen nga return kodi; ne funksionin kerkoProdukt; 
 	
     cout << "\n\tA deshironi te fshini kete produkt (po/jo) : ";
     
@@ -289,7 +290,10 @@ void fshijProdukt(){
 int main()
 {
 
-    while (true) {
+    while (true) { //Afisho menut ne cdo faqe ( true ) 
+    	
+    	//Afisho menut ne forme liste 
+    	
         cout << "\n\t1.Shto nje produkt";
         cout << "\n\t2.Lista e produkteve";
         cout << "\n\t3.Kerko per produkt sipas kodit";
@@ -300,7 +304,7 @@ int main()
 
         int menu;
         cout << "\n\tPerzgjidh menun : ";
-        cin >> menu;
+        cin >> menu;  //Shkruaj menun qe do te aksesosh (perdoresh)
         switch (menu) {
         case 1:
             shtoProdukt();
@@ -320,7 +324,6 @@ int main()
         case 6:
         	fshijProdukt();
             break;
-            
         }
      }
     
@@ -341,15 +344,20 @@ int main()
     Regjistrimi i te dhënave dhe ruajtja e tyre ne disk(storage)
     Krijimi i tabelave për faturat e produkteve
     
+    ********************************
     
-    Cfare eshte tempFile.
+    Universiteti "Aleksandër Moisiu" Durrës - UAMD
     
-    Referuar ndryshe si nje skedar, një skedar i përkohshëm ose skedar temp është një skedar
-	i krijuar për të mbajtur informacion ndërsa një skedar po krijohet ose modifikohet.
-	Pas mbylljes së programit, skedari i përkohshëm fshihet.
-	Skedarët e përkohshëm ruajnë dhe lëvizin të dhënat, menaxhojnë ndryshimet,
-	ndihmojnë në rikuperimin e të dhënave të humbura etj.
+    Punuan :
+    
+    Ilirijan Troci
+    Fjorida Dosku
+    Ilda Rapushi
+    Gerald Hasi
+    
+    Lenda : Programim ne c++
 
+	https://github.com/ilirjantroci/managethemagazine
 */
 
 
